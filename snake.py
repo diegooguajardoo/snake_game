@@ -41,3 +41,10 @@ class Snake:
     def right(self):
         if self.head.heading() != 180:
             self.head.setheading(0)
+
+    def collision_with_food(self, food):
+        if self.head.distance(food) < 10:
+            print(self.head.position())
+            print(food.position())
+            food.refresh()
+
