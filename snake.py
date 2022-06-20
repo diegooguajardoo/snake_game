@@ -1,3 +1,4 @@
+import random
 from turtle import Turtle
 
 STARTING_POSITIONS = [(0, 0), (-20, 0), (-40, 0)]
@@ -51,3 +52,8 @@ class Snake:
     @staticmethod
     def collision_with_food(food):
         food.refresh()
+
+    def teletransport(self):
+        x_random = random.randrange(-280, 280, 20)
+        y_random = random.randrange(-280, 280, 20)
+        self.head.goto(x_random, y_random)

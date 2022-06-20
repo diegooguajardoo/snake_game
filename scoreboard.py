@@ -28,3 +28,8 @@ class Scoreboard(Turtle):
         self.hideturtle()
         self.write(arg="GAME OVER.", align="center", font=("Menlo", 16, "normal"))
 
+    def teletransport_message(self):
+        self.penup()
+        self.sety(-40)
+        self.hideturtle()
+        self.write(arg="TELETRANSPORTATION!", align="center", font=("Menlo", 16, "normal"))

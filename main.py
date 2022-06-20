@@ -10,7 +10,6 @@ screen.bgcolor("black")
 screen.title("Snake Game")
 screen.tracer(0)
 
-
 snake = Snake()
 food = Food()
 scoreboard = Scoreboard()
@@ -32,6 +31,9 @@ while game_is_on:
         food.refresh()
         snake.extend()
         scoreboard.add_point()
+        if scoreboard.score % 5 == 0:
+            snake.teletransport()
+            scoreboard.teletransport_message()
 
 # Detects collision with wall
     if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
