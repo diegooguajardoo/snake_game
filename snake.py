@@ -43,8 +43,5 @@ class Snake:
             self.head.setheading(0)
 
     def collision_with_food(self, food):
-        if self.head.distance(food) < 10:
-            print(self.head.position())
-            print(food.position())
-            food.refresh()
+        food.refresh()
 
